@@ -1,6 +1,6 @@
 # spotify-infinite
 
-Scripts to download albums from Spotify and add to an append-only local store.
+Scripts to download saved album metadata from Spotify to an append-only local store and generate a markdown page for them.
 
 This helps remember more albums than can be saved under the current spotify 10k track limit.
 
@@ -35,5 +35,5 @@ python3 bin/get_albums.py $USERNAME
 
 ### Generate Markdown
 ```sh
-python bin/generate_markdown.py
+python3 bin/generate_markdown.py
 ```
