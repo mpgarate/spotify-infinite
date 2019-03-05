@@ -2,6 +2,38 @@ import dateutil.parser as dp
 import json
 
 
+class AlbumFormatter(object):
+    def __init__(self, album):
+        self.album = album
+
+    def image(self):
+        image_url = next(img for img in self.album['images']
+                         if img['height'] == 300)['url']
+
+        url = self.album['external_urls']['spotify']
+
+        image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
+            url, image_url)
+
+        return image
+
+    def name(self):
+        return self.album['name']
+
+    def artists(self):
+        return ",".join(
+            map(lambda artist: artist['name'], self.album['artists']))
+
+    def release_date(self):
+        return self.album['release_date']
+
+    def total_tracks(self):
+        return self.album['total_tracks']
+
+    def library_add_date(self):
+        return dp.parse(self.album['added_at']).strftime('%F')
+
+
 class MarkdownGenerator(object):
     albumstore_filename = 'albums.json'
     recent_albums_filename = 'recent_albums.md'
@@ -23,32 +55,21 @@ class MarkdownGenerator(object):
 
         with open(self.recent_albums_filename, 'w') as f:
             f.write("# Recent Albums\n\n")
-            f.write("Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
-            f.write("-----|-----|------|------------|------|----------------\n")
+            f.write(
+                "Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
+            f.write(
+                "-----|-----|------|------------|------|----------------\n")
 
             for album in self._get_recent_albums():
+                # ignore for pprint-ing
                 album['available_markets'] = None
                 album['tracks'] = None
 
-                # <img width="100" src="https://i.scdn.co/image/3768eb4a008c18600bcf8af2c2eed84124b55ab2"> | Beats, Not Words | Sol Monk | 2015 | 7 tracks | 123
-
-                artists = ",".join(
-                    map(lambda artist: artist['name'], album['artists']))
-
-                image_url = next(img for img in album['images']
-                                 if img['height'] == 300)['url']
-                url = album['external_urls']['spotify']
-
-                image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
-                    url, image_url)
-
-                library_add_date = dp.parse(album['added_at']).strftime('%F')
-
+                afmt = AlbumFormatter(album)
                 doc = "%s | %s | %s | %s | %s | %s" % (
-                    image, album['name'], artists, album['release_date'],
-                    album['total_tracks'], library_add_date)
-
-                doc += "\n"
+                    afmt.image(), afmt.name(), afmt.artists(),
+                    afmt.release_date(), afmt.total_tracks(),
+                    afmt.library_add_date())
 
                 f.write(doc)
 
