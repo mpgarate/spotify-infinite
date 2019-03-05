@@ -66,7 +66,7 @@ class MarkdownGenerator(object):
                 album['tracks'] = None
 
                 afmt = AlbumFormatter(album)
-                doc = "%s | %s | %s | %s | %s | %s" % (
+                doc = "%s | %s | %s | %s | %s | %s\n" % (
                     afmt.image(), afmt.name(), afmt.artists(),
                     afmt.release_date(), afmt.total_tracks(),
                     afmt.library_add_date())
