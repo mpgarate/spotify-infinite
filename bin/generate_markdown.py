@@ -6,23 +6,30 @@ class AlbumFormatter(object):
     def __init__(self, album):
         self.album = album
 
-    def image(self):
-        image_url = next(img for img in self.album['images']
-                         if img['height'] == 300)['url']
+    def _raw_album_url(self):
+        return self.album['external_urls']['spotify']
 
-        url = self.album['external_urls']['spotify']
+    def image(self):
+        image_url = next(
+            img for img in self.album['images'] if img['height'] == 300)['url']
 
         image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
-            url, image_url)
+            self._raw_album_url(), image_url)
 
         return image
 
     def name(self):
-        return self.album['name']
+        return '<a href="%s" target="_blank">%s</a>' % (self._raw_album_url(),
+                                                        self.album['name'])
 
     def artists(self):
-        return ",".join(
-            map(lambda artist: artist['name'], self.album['artists']))
+        from pprint import pprint
+        pprint(self.album['artists'])
+        return ", ".join(
+            map(
+                lambda a: '<a href="%s" target="_blank">%s</a>' % (a[
+                    'external_urls']['spotify'], a['name']),
+                self.album['artists']))
 
     def release_date(self):
         return self.album['release_date']
