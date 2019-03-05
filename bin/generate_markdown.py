@@ -25,7 +25,7 @@ class AlbumFormatter(object):
     def artists(self):
         from pprint import pprint
         pprint(self.album['artists'])
-        return ", ".join(
+        return "<br>".join(
             map(
                 lambda a: '<a href="%s" target="_blank">%s</a>' % (a[
                     'external_urls']['spotify'], a['name']),
