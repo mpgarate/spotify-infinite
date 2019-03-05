@@ -10,11 +10,22 @@ class AlbumFormatter(object):
         return self.album['external_urls']['spotify']
 
     def image(self):
-        image_url = next(
-            img for img in self.album['images'] if img['height'] == 300)['url']
+        from pprint import pprint
+        pprint(self.album['images'])
+
+        image = None
+        for i in self.album['images']:
+            if not image:
+                image = i
+
+            if i['height'] == 300 or (image['height'] < 300 and i['height'] > image['height']):
+                image = i
+
+        if not image:
+            return "None"
 
         image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
-            self._raw_album_url(), image_url)
+            self._raw_album_url(), image['url'])
 
         return image
 
@@ -23,8 +34,6 @@ class AlbumFormatter(object):
                                                         self.album['name'])
 
     def artists(self):
-        from pprint import pprint
-        pprint(self.album['artists'])
         return "<br>".join(
             map(
                 lambda a: '<a href="%s" target="_blank">%s</a>' % (a[

@@ -6,6 +6,8 @@ import spotipy.util as util
 
 import json
 
+import time
+
 scope = 'user-library-read'
 
 
@@ -28,13 +30,28 @@ def main():
     # TODO: get more data
     results = sp.current_user_saved_albums()
 
-    for item in results['items']:
-        album = item['album']
-        album['added_at'] = item['added_at']
+    num_albums = 0
 
-        album_store.add(album)
+    while True:
+        for item in results['items']:
+            album = item['album']
+            album['added_at'] = item['added_at']
+
+            album_store.add(album)
+            num_albums += 1
+
+        if not results['next']:
+            break
+
+        
+        print("%s albums fetched..." % num_albums)
+
+        # be extra nice to our hugops friends at Spotify
+        time.sleep(1)
+        results = sp.next(results)
 
     album_store.write_albums()
+    print("done")
 
 
 class AlbumStore(object):
