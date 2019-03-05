@@ -15,7 +15,8 @@ class AlbumFormatter(object):
             if not image:
                 image = i
 
-            if i['height'] == 64 or (image['height'] < 300 and i['height'] > image['height']):
+            if i['height'] == 64 or (image['height'] < 300
+                                     and i['height'] > image['height']):
                 image = i
 
         if not image:
@@ -66,6 +67,7 @@ class MarkdownGenerator(object):
     def write_recent_albums(self):
         with open(self.recent_albums_filename, 'w') as f:
             f.write("# Recent Albums\n\n")
+            f.write("[Jump to bottom](#bottom)\n\n")
             f.write(
                 "Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
             f.write(
@@ -79,6 +81,8 @@ class MarkdownGenerator(object):
                     afmt.library_add_date())
 
                 f.write(doc)
+
+            f.write("### Bottom")
 
 
 MarkdownGenerator().write_recent_albums()

@@ -1,5 +1,7 @@
 # Recent Albums
 
+[Jump to bottom](#bottom)
+
 Cover|Album|Artist|Release Date|Tracks|Library Add Date
 -----|-----|------|------------|------|----------------
 <a href="https://open.spotify.com/album/5rEeRWqFBA4Cc8rpvLCno6" target="_blank"><img width="64" src="https://i.scdn.co/image/85e2bc2a393d197a5079b1e4a0cb8a95bcd9b7f4"></a> | <a href="https://open.spotify.com/album/5rEeRWqFBA4Cc8rpvLCno6" target="_blank">Make Time</a> | <a href="https://open.spotify.com/artist/6S8iF3O4XNvUO2Ipg47yFq" target="_blank">Sol Monk</a> | 2015 | 7 | 2019-01-25
@@ -874,3 +876,4 @@ Cover|Album|Artist|Release Date|Tracks|Library Add Date
 <a href="https://open.spotify.com/album/0MFKr3DLiniTjtTpku1nsY" target="_blank"><img width="64" src="https://i.scdn.co/image/d7773d80193d877fb7a0b860a0646f91b6eb1f1e"></a> | <a href="https://open.spotify.com/album/0MFKr3DLiniTjtTpku1nsY" target="_blank">The Age Of The Understatement</a> | <a href="https://open.spotify.com/artist/2Z7UcsdweVlRbAk5wH5fsf" target="_blank">The Last Shadow Puppets</a> | 2008-05-06 | 12 | 2015-04-23
 <a href="https://open.spotify.com/album/2h1RbtnV91wMdNQN5LAWSA" target="_blank"><img width="64" src="https://i.scdn.co/image/9d0330608c6116d83bf4f01493552000b5015926"></a> | <a href="https://open.spotify.com/album/2h1RbtnV91wMdNQN5LAWSA" target="_blank">Preschtale</a> | <a href="https://open.spotify.com/artist/1eJmfAGFKrgG7X83Z14Gyy" target="_blank">C-jeff</a> | 2013-05-01 | 7 | 2015-04-22
 <a href="https://open.spotify.com/album/3BfAgyF1AdYKaOO7EBoDw4" target="_blank"><img width="64" src="https://i.scdn.co/image/d98ea9eaee19f7265a633d636b2fd469092bf28a"></a> | <a href="https://open.spotify.com/album/3BfAgyF1AdYKaOO7EBoDw4" target="_blank">The Joy of Motion</a> | <a href="https://open.spotify.com/artist/65C6Unk7nhg2aCnVuAPMo8" target="_blank">Animals As Leaders</a> | 2014-03-25 | 12 | 2015-04-22
+### Bottom

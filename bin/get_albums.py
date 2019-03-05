@@ -42,7 +42,6 @@ def main():
         if not results['next']:
             break
 
-        
         print("%s albums fetched..." % num_albums)
 
         # be extra nice to our hugops friends at Spotify
