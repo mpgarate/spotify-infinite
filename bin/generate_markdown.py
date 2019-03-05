@@ -14,30 +14,39 @@ class MarkdownGenerator(object):
 
     def _get_recent_albums(self):
         return sorted(
-            self.albums, key=lambda a: dp.parse(a['added_at']).strftime('%s'), reverse=True)
+            self.albums,
+            key=lambda a: dp.parse(a['added_at']).strftime('%s'),
+            reverse=True)
 
     def write_recent_albums(self):
         from pprint import pprint
 
         with open(self.recent_albums_filename, 'w') as f:
             f.write("# Recent Albums\n\n")
+            f.write("Cover|Album|Artist|Release Date|Tracks|Library Add Date")
+            f.write("-----|-----|------|------------|------|----------------")
 
             for album in self._get_recent_albums():
                 album['available_markets'] = None
                 album['tracks'] = None
 
-                doc = "### %s\n" % album['name']
+                # <img width="100" src="https://i.scdn.co/image/3768eb4a008c18600bcf8af2c2eed84124b55ab2"> | Beats, Not Words | Sol Monk | 2015 | 7 tracks | 123
 
-                artists = ",".join(map(lambda artist: artist['name'], album['artists']))
-                doc += "#### %s\n" % artists
+                artists = ",".join(
+                    map(lambda artist: artist['name'], album['artists']))
 
-                image_url = next(img for img in album['images'] if img['height'] == 300)['url']
+                image_url = next(img for img in album['images']
+                                 if img['height'] == 300)['url']
                 url = album['external_urls']['spotify']
-                doc += "[![%s](%s)](%s)\n" % (album['name'], image_url, url)
 
-                doc += "Released %s\n" % album['release_date']
+                image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
+                    url, image_url)
 
-                doc += "%s tracks\n" % (album['total_tracks'])
+                library_add_date = dp.parse(album['added_at']).strftime('%F')
+
+                doc = "%s | %s | %s | %s | %s | %s" % (
+                    image, album['name'], artists, album['release_date'],
+                    album['total_tracks'], library_add_date)
 
                 doc += "\n"
 
