@@ -33,7 +33,7 @@ class MarkdownGenerator(object):
 
                 image_url = next(img for img in album['images'] if img['height'] == 300)['url']
                 url = album['external_urls']['spotify']
-                doc += "[![%s](%s)](%s)\n" % (image_url, album['name'], url)
+                doc += "[![%s](%s)](%s)\n" % (album['name'], image_url, url)
 
                 doc += "Released %s\n" % album['release_date']
 
