@@ -27,7 +27,6 @@ def main():
 
     album_store = AlbumStore()
 
-    # TODO: get more data
     results = sp.current_user_saved_albums()
 
     num_albums = 0
@@ -64,6 +63,10 @@ class AlbumStore(object):
             self.albums = json.loads(f.read() or "{}")
 
     def add(self, album):
+        # skip these large and unused fields
+        album['available_markets'] = None
+        album['tracks'] = None
+
         self.albums[album['id']] = album
 
     def write_albums(self):

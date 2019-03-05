@@ -10,9 +10,6 @@ class AlbumFormatter(object):
         return self.album['external_urls']['spotify']
 
     def image(self):
-        from pprint import pprint
-        pprint(self.album['images'])
-
         image = None
         for i in self.album['images']:
             if not image:
@@ -24,7 +21,7 @@ class AlbumFormatter(object):
         if not image:
             return "None"
 
-        image = '<a href="%s" target="_blank"><img width="100" src="%s"></a>' % (
+        image = '<a href="%s" target="_blank"><img width="64" src="%s"></a>' % (
             self._raw_album_url(), image['url'])
 
         return image
@@ -67,8 +64,6 @@ class MarkdownGenerator(object):
             reverse=True)
 
     def write_recent_albums(self):
-        from pprint import pprint
-
         with open(self.recent_albums_filename, 'w') as f:
             f.write("# Recent Albums\n\n")
             f.write(
@@ -77,10 +72,6 @@ class MarkdownGenerator(object):
                 "-----|-----|------|------------|------|----------------\n")
 
             for album in self._get_recent_albums():
-                # ignore for pprint-ing
-                album['available_markets'] = None
-                album['tracks'] = None
-
                 afmt = AlbumFormatter(album)
                 doc = "%s | %s | %s | %s | %s | %s\n" % (
                     afmt.image(), afmt.name(), afmt.artists(),
