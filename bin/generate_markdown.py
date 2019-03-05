@@ -18,7 +18,7 @@ class AlbumFormatter(object):
             if not image:
                 image = i
 
-            if i['height'] == 300 or (image['height'] < 300 and i['height'] > image['height']):
+            if i['height'] == 64 or (image['height'] < 300 and i['height'] > image['height']):
                 image = i
 
         if not image:
