@@ -1,6 +1,8 @@
 # Recent Albums
 
-Cover|Album|Artist|Release Date|Tracks|Library Add Date-----|-----|------|------------|------|----------------<a href="https://open.spotify.com/album/5rEeRWqFBA4Cc8rpvLCno6" target="_blank"><img width="100" src="https://i.scdn.co/image/3768eb4a008c18600bcf8af2c2eed84124b55ab2"></a> | Make Time | Sol Monk | 2015 | 7 | 2019-01-25
+Cover|Album|Artist|Release Date|Tracks|Library Add Date
+-----|-----|------|------------|------|----------------
+<a href="https://open.spotify.com/album/5rEeRWqFBA4Cc8rpvLCno6" target="_blank"><img width="100" src="https://i.scdn.co/image/3768eb4a008c18600bcf8af2c2eed84124b55ab2"></a> | Make Time | Sol Monk | 2015 | 7 | 2019-01-25
 <a href="https://open.spotify.com/album/7HoV3rUHCRRiMswjAmhS29" target="_blank"><img width="100" src="https://i.scdn.co/image/a678ee8cf178ae9f6a80589c9aa64a4bf0960b03"></a> | Beats, Not Words | Sol Monk | 2014 | 13 | 2019-01-25
 <a href="https://open.spotify.com/album/33YBL2v5dzcgEeebJ2E5Xn" target="_blank"><img width="100" src="https://i.scdn.co/image/ef2c9ef89585fb686a2a0a86a1b88d421a369d48"></a> | Material Culture 9.19.15 | Jeremy Krinsley,Greg Heffernan | 2017-02-03 | 5 | 2019-01-24
 <a href="https://open.spotify.com/album/49MNmJhZQewjt06rpwp6QR" target="_blank"><img width="100" src="https://i.scdn.co/image/fea588a046b0f48120af06217d95eb0fa08ce8bf"></a> | Mezzanine | Massive Attack | 1998-01-01 | 11 | 2019-01-24

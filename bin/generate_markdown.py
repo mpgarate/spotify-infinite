@@ -23,8 +23,8 @@ class MarkdownGenerator(object):
 
         with open(self.recent_albums_filename, 'w') as f:
             f.write("# Recent Albums\n\n")
-            f.write("Cover|Album|Artist|Release Date|Tracks|Library Add Date")
-            f.write("-----|-----|------|------------|------|----------------")
+            f.write("Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
+            f.write("-----|-----|------|------------|------|----------------\n")
 
             for album in self._get_recent_albums():
                 album['available_markets'] = None
