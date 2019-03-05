@@ -31,7 +31,7 @@ class MarkdownGenerator(object):
                 artists = ",".join(map(lambda artist: artist['name'], album['artists']))
                 doc += "#### %s\n" % artists
 
-                image_url = next(img for img in album['images'] if img['height'] == 300)
+                image_url = next(img for img in album['images'] if img['height'] == 300)['url']
                 url = album['external_urls']['spotify']
                 doc += "[![%s](%s)](%s)\n" % (image_url, album['name'], url)
 
