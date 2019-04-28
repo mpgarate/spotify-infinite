@@ -39,6 +39,9 @@ def main():
             album_store.add(album)
             num_albums += 1
 
+        # if num_albums >= 20:
+            # break
+
         if not results['next']:
             break
 
@@ -58,8 +61,8 @@ class AlbumStore(object):
     def __init__(self):
         self.albums = {}
 
-        with open(self.albumstore_filename, 'w+') as f:
-            self.albums = json.loads(f.read() or "{}")
+        with open(self.albumstore_filename, 'r') as f:
+            self.albums = json.loads(f.read())
 
     def add(self, album):
         # skip these large and unused fields
@@ -70,7 +73,14 @@ class AlbumStore(object):
 
     def write_albums(self):
         with open(self.albumstore_filename, 'w') as f:
-            f.write(json.dumps(self.albums))
+            f.write("{\n")
+            for i, (k,v) in enumerate(self.albums.items()):
+                s = json.dumps(v)
+                f.write('"%s": %s' % (k,s))
+                if i < len(self.albums) - 1:
+                    f.write(',')
+                f.write('\n')
+            f.write("}")
 
 
 main()
