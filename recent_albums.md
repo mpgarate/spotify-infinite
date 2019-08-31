@@ -3,7 +3,7 @@
 [Jump to bottom](#bottom)
 
 Cover|Album|Artist|Release Date|Tracks|Library Add Date
------|-----|------|------------|------|----------------
+|-----|-----|------|------------|------|----------------|
 <a href="https://open.spotify.com/album/5XeFyqPtjcGWkj7vf6EArY" target="_blank"><img width="64" src="https://i.scdn.co/image/f2527069f4465a9727809ff468045a4bede13884"></a> | <a href="https://open.spotify.com/album/5XeFyqPtjcGWkj7vf6EArY" target="_blank">Lift</a> | <a href="https://open.spotify.com/artist/2JEmeK4NqHMXdtSMxCcWad" target="_blank">StarSystems</a> | 2019-05-11 | 9 | 2019-08-28
 <a href="https://open.spotify.com/album/50wgSGPzuqsQqkNRHLpl9s" target="_blank"><img width="64" src="https://i.scdn.co/image/236499a3227d4e85b05d0eb83cd3706c06346d8c"></a> | <a href="https://open.spotify.com/album/50wgSGPzuqsQqkNRHLpl9s" target="_blank">StarSystems III</a> | <a href="https://open.spotify.com/artist/2JEmeK4NqHMXdtSMxCcWad" target="_blank">StarSystems</a> | 2016-08-01 | 5 | 2019-08-28
 <a href="https://open.spotify.com/album/140HPATke2m0iUEJ0kNb5D" target="_blank"><img width="64" src="https://i.scdn.co/image/06e78326688518d73086576a357c06dbd0e00013"></a> | <a href="https://open.spotify.com/album/140HPATke2m0iUEJ0kNb5D" target="_blank">Favorites 3</a> | <a href="https://open.spotify.com/artist/2N79L5eT2Xraec4UJsi2Fz" target="_blank">Justice Der</a> | 2019-05-26 | 5 | 2019-08-26

@@ -71,7 +71,7 @@ class MarkdownGenerator(object):
             f.write(
                 "Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
             f.write(
-                "-----|-----|------|------------|------|----------------\n")
+                "|-----|-----|------|------------|------|----------------|\n")
 
             for album in self._get_recent_albums():
                 afmt = AlbumFormatter(album)
