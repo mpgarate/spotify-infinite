@@ -69,7 +69,7 @@ class MarkdownGenerator(object):
             f.write("# Recent Albums\n\n")
             f.write("[Jump to bottom](#bottom)\n\n")
             f.write(
-                "Cover|Album|Artist|Release Date|Tracks|Library Add Date\n")
+                "|Cover|Album|Artist|Release Date|Tracks|Library Add Date|\n")
             f.write(
                 "|-----|-----|------|------------|------|----------------|\n")
 
@@ -82,6 +82,7 @@ class MarkdownGenerator(object):
 
                 f.write(doc)
 
+            f.write("\n")
             f.write("### Bottom")
 
 

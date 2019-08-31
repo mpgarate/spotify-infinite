@@ -2,7 +2,7 @@
 
 [Jump to bottom](#bottom)
 
-Cover|Album|Artist|Release Date|Tracks|Library Add Date
+|Cover|Album|Artist|Release Date|Tracks|Library Add Date|
 |-----|-----|------|------------|------|----------------|
 <a href="https://open.spotify.com/album/5XeFyqPtjcGWkj7vf6EArY" target="_blank"><img width="64" src="https://i.scdn.co/image/f2527069f4465a9727809ff468045a4bede13884"></a> | <a href="https://open.spotify.com/album/5XeFyqPtjcGWkj7vf6EArY" target="_blank">Lift</a> | <a href="https://open.spotify.com/artist/2JEmeK4NqHMXdtSMxCcWad" target="_blank">StarSystems</a> | 2019-05-11 | 9 | 2019-08-28
 <a href="https://open.spotify.com/album/50wgSGPzuqsQqkNRHLpl9s" target="_blank"><img width="64" src="https://i.scdn.co/image/236499a3227d4e85b05d0eb83cd3706c06346d8c"></a> | <a href="https://open.spotify.com/album/50wgSGPzuqsQqkNRHLpl9s" target="_blank">StarSystems III</a> | <a href="https://open.spotify.com/artist/2JEmeK4NqHMXdtSMxCcWad" target="_blank">StarSystems</a> | 2016-08-01 | 5 | 2019-08-28
@@ -935,4 +935,5 @@ Cover|Album|Artist|Release Date|Tracks|Library Add Date
 <a href="https://open.spotify.com/album/14bmNzbjfysfg0SErQA4Pj" target="_blank"><img width="64" src="https://i.scdn.co/image/762d25ce4834fa785af14f260d895c00558a9af6"></a> | <a href="https://open.spotify.com/album/14bmNzbjfysfg0SErQA4Pj" target="_blank">One Day I'll Be On Time</a> | <a href="https://open.spotify.com/artist/02uPe16VFxPaiueQsPEDkE" target="_blank">The Album Leaf</a> | 2001-05-22 | 12 | 2015-04-28
 <a href="https://open.spotify.com/album/6spTDEWQfiSsKjkR9NmuDX" target="_blank"><img width="64" src="https://i.scdn.co/image/5473000bb2b73acc3db476649c390ee5b0699b36"></a> | <a href="https://open.spotify.com/album/6spTDEWQfiSsKjkR9NmuDX" target="_blank">Fleet Foxes</a> | <a href="https://open.spotify.com/artist/4EVpmkEwrLYEg6jIsiPMIb" target="_blank">Fleet Foxes</a> | 2008-06-03 | 11 | 2015-04-26
 <a href="https://open.spotify.com/album/0mcvDycoex7ANLZOmVVRoD" target="_blank"><img width="64" src="https://i.scdn.co/image/a8c9adb2f8b357a000ad102414137398d2c52427"></a> | <a href="https://open.spotify.com/album/0mcvDycoex7ANLZOmVVRoD" target="_blank">The Year of Hibernation</a> | <a href="https://open.spotify.com/artist/1Z2KInfSmPOzAIYyiaXeti" target="_blank">Youth Lagoon</a> | 2011-09-27 | 10 | 2015-04-24
+
 ### Bottom
